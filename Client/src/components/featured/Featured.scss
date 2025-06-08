@@ -1,0 +1,211 @@
+.featured {
+    height: auto; // Adjust height for mobile
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #003366; // Primary Deep Blue
+    color: white;
+    padding: 50px 20px; // Adjust padding for mobile
+    overflow: hidden;
+
+    .container {
+        width: 100%; // Full width on mobile
+        max-width: 1300px; // Limit width on larger screens
+        display: flex;
+        flex-direction: column; // Stack elements vertically on mobile
+        align-items: center;
+        gap: 30px; // Add gap between elements
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; // Reduce gap for mobile
+            text-align: center; // Center text on mobile
+
+            h1 {
+                font-size: 28px; // Smaller font size for mobile
+
+                i {
+                    font-weight: 300;
+                }
+            }
+
+            .search {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: white;
+                border-radius: 5px;
+                width: 100%; // Full width on mobile
+                max-width: 700px; // Limit width on larger screens
+                height: 50px;
+
+                .searchInput {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    flex: 1;
+                    min-width: 0;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        margin: 10px;
+                    }
+
+                    input {
+                        border: none;
+                        outline: none;
+                        width: 100%;
+                        font-size: 16px;
+                    }
+                }
+
+                button {
+                    width: 120px;
+                    height: 100%;
+                    border: none;
+                    background-color: #1DBF73; // Accent Vibrant Green
+                    color: white;
+                    cursor: pointer;
+                    font-weight: bold;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: #17a95e; // Darker shade on hover
+                    }
+                }
+            }
+
+            .popular {
+                display: flex;
+                flex-wrap: wrap; // Allow buttons to wrap on mobile
+                justify-content: center; // Center buttons on mobile
+                gap: 10px;
+
+                span {
+                    font-weight: bold;
+                }
+
+                button {
+                    border: 1px solid white;
+                    background-color: transparent;
+                    color: white;
+                    padding: 5px 15px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    transition: 0.3s;
+
+                    &:hover {
+                        background-color: #1DBF73;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 100%; // Full width on mobile
+            max-width: 450px; // Limit width on larger screens
+            height: auto; // Adjust height for mobile
+
+            img {
+                width: 100%; // Full width on mobile
+                height: auto; // Adjust height for mobile
+                object-fit: cover; // Ensure image fits well
+                border-radius: 10px;
+            }
+        }
+    }
+
+    // Media Queries for Larger Screens
+    @media (min-width: 768px) {
+        height: 450px; // Restore height for larger screens
+        padding-top: 100px; // Restore padding for larger screens
+
+        .container {
+            flex-direction: row; // Side-by-side layout for larger screens
+            justify-content: space-between;
+
+            .left {
+                text-align: left; // Align text to the left for larger screens
+
+                h1 {
+                    font-size: 40px; // Restore font size for larger screens
+                }
+
+                .search {
+                    width: 700px; // Restore width for larger screens
+                }
+
+                .popular {
+                    justify-content: flex-start; // Align buttons to the left for larger screens
+                }
+            }
+
+            .right {
+                height: 100%; // Restore height for larger screens
+
+                img {
+                    width: 450px; // Restore width for larger screens
+                    height: 100%; // Restore height for larger screens
+                }
+            }
+        }
+    }
+     // **Mobile-Only Adjustments**
+     @media (max-width: 760px) {
+      .joeGigs {
+        display: none;  
+      }
+  
+      .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     
+        margin-top: 50px;  // Add space below navbar in mobile view
+      }
+  
+      .left {
+        text-align: center;
+  
+        h2 {
+          font-size: 28px;  // Smaller font size for mobile
+        }
+  
+        .search {
+          width: 100%;
+          max-width: 90%;  // Ensure the search input is responsive
+        }
+  
+        .popular {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap:10px;
+        }
+      }
+  
+      .right {
+        width: 100%;
+        max-width: 400px; 
+        img {
+        display: none;
+         // width: 100%;
+         // height:20px;
+        }
+      }
+  
+      .extraText {
+        h3 {
+          font-size: 40px;  // Adjust h3 font size for mobile
+        }
+  
+        p {
+          font-size: 14px;  // Adjust paragraph text for mobile
+        }
+      }
+    }
+  
+}

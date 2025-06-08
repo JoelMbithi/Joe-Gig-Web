@@ -1,0 +1,175 @@
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 20px;
+
+  form {
+    width: 960px;
+    padding: 50px 0px;
+    display: flex;
+    gap: 120px;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+
+    h1 {
+      color: gray;
+      margin-bottom: 20px;
+    }
+
+    .left,
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px; /* Reduced gap for better fit on small screens */
+      justify-content: space-between;
+      max-width: 450px; /* Prevents elements from stretching too wide */
+
+      label {
+        color: gray;
+        font-size: 18px;
+      }
+
+      input,
+      textarea {
+        padding: 15px;
+        border: 1px solid rgb(216, 214, 214);
+        font-size: 16px;
+      }
+
+      button {
+        border: none;
+        padding: 15px;
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+        background-color: #1dbf73;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .toggle {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 50px;
+          height: 24px;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          transition: 0.4s;
+          border-radius: 24px;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 16px;
+          width: 16px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          transition: 0.4s;
+          border-radius: 50%;
+        }
+
+        input:checked + .slider {
+          background-color: #2196f3;
+        }
+
+        input:focus + .slider {
+          box-shadow: 0 0 1px #2196f3;
+        }
+
+        input:checked + .slider:before {
+          transform: translateX(26px);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 15px; /* Adjust padding for mobile screens */
+    
+    .register {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px; /* Add some space between form elements */
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 15px; /* Reduced gap between form elements for mobile */
+    }
+
+    .left{
+      padding: 50px;
+      
+    }
+    .right {
+      flex: none; /* Allow both sides to stack vertically */
+      width: 100%; /* Full width on mobile */
+      max-width: 100%; /* Ensure no maximum width on mobile */
+    }
+
+    h1 {
+      font-size: 22px; /* Adjust the heading size for mobile */
+    }
+
+    label {
+      font-size: 16px; /* Adjust label font size */
+    }
+
+    input,
+    textarea {
+      font-size: 16px; /* Adjust input and textarea font size */
+      padding: 12px; /* Reduce padding for mobile screens */
+    }
+
+    button {
+      font-size: 16px;
+      padding: 15px;
+    }
+
+    .toggle {
+      flex-direction: column; /* Stack toggle elements for mobile */
+    }
+
+    .switch {
+      width: 40px; /* Adjust the switch width for smaller screens */
+      height: 20px;
+    }
+
+    .slider {
+      height: 20px;
+    }
+
+    .slider:before {
+      width: 12px;
+      height: 12px;
+      left: 4px;
+      bottom: 4px;
+    }
+  }
+}

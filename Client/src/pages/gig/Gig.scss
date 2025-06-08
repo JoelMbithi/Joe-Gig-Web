@@ -1,0 +1,262 @@
+.gig {
+  padding: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .container {
+    width: 1300px;
+    padding: 20px 0px;
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+
+    .left {
+      width: 600px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .breadCrumb {
+        font-weight: 300;
+        font-size: 13px;
+        color: #555;
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .profile {
+          img {
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+          }
+        }
+
+        span {
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        .stars {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          img {
+            width: 14px;
+            height: 14px;
+          }
+
+          span {
+            font-size: 14px;
+            font-weight: bold;
+            color: #ffc108;
+          }
+        }
+      }
+      .slider {
+        img {
+          max-height: 500px;
+          object-fit: contain;
+        }
+      }
+
+      h2 {
+        font-weight: 500;
+      }
+
+      p {
+        font-weight: 300;
+        color: #555;
+        line-height: 25px;
+      }
+
+      .seller {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .user {
+          display: flex;
+          align-items: center;
+          height: 80px;
+
+          img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+          }
+
+          .info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .stars {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+
+              img {
+                width: 14px;
+                height: 14px;
+              }
+
+              span {
+                font-size: 14px;
+                font-weight: bold;
+                color: #ffc108;
+              }
+            }
+
+            button {
+              background-color: #fff;
+              border-radius: 5px;
+              border: 1px solid gray;
+              padding: 10px;
+              cursor: pointer;
+            }
+
+            button:hover {
+              background-color: rgb(255, 255, 255);
+              padding: 16px;
+            }
+          }
+        }
+        .box {
+          border: 1px solid lightgray;
+          border-radius: 5px;
+          padding: 20px;
+          margin-top: 20px;
+
+          .items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .item {
+              width: 300px;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              margin-bottom: 20px;
+
+              .title {
+                font-weight: 300;
+              }
+            }
+          }
+
+          hr {
+            height: 0;
+            border: 1px solid lightgray;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      
+    }
+    .right {
+      width: 400px;
+      border: 1px solid lightgray;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    
+      top: 150px;
+      height: max-content;
+      max-height: 600px;
+      background-color: white; // Ensure it doesn't get hidden under other elements
+
+      position: sticky;
+
+      align-self: flex-start;
+
+      .price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+          font-weight: 300;
+        }
+
+        h3 {
+          font-weight: 500;
+        }
+
+        p {
+          color: gray;
+          margin: 10px 0px;
+        }
+      }
+
+      .details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 10px;
+          }
+        }
+      }
+
+      .features {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: transparent;
+        margin-left: 20px;
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: 300;
+          margin-bottom: 5px;
+
+          img {
+            width: 14px;
+          }
+
+          .greenCheck {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            img {
+              width: 20px;
+            }
+          }
+        }
+      }
+
+      button{
+        background-color: #1dbf73;
+        padding: 10px;
+        color: white;
+        border: none;
+        font-weight: 500;
+        font-size: 28px;
+
+      }
+    }
+  }
+}

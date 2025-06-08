@@ -1,0 +1,127 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    color: #b0b0b0;
+    margin: 50px 0px;
+    padding: 20px;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .container {
+        width: 1200px;
+        max-width: 100%;
+        padding: 0 20px;
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; // Ensures items wrap in smaller screens
+            gap: 30px;
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                flex: 1 1 200px; // Adjusts width for mobile responsiveness
+                min-width: 150px;
+
+                h2 {
+                    font-size: 16px;
+                    color: #555;
+                }
+
+                span {
+                    font-weight: 300;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        hr {
+            margin: 30px 0px;
+            border: 1px solid #b0b0b0;
+        }
+
+        .bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 5px;
+
+                span {
+                    font-size: 13px;
+                }
+            }
+
+            .right {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+
+                .social {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                }
+                 .linkF{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                .link {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+            }
+            }
+        }
+    }
+
+    // Mobile Responsive
+    @media (max-width: 768px) {
+        .container {
+            .top {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                text-align: center;
+
+                .item {
+                    width: 100%;
+                }
+            }
+
+            .bottom {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .right{
+                display: flex;
+                flex-direction: column;
+                .social{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    flex-direction: row;
+                    
+                }
+            }
+        }
+    }
+}

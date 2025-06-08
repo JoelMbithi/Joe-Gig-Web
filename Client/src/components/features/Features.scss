@@ -1,0 +1,92 @@
+.features {
+  background-color: #b0b0b0;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0px;
+
+  .container {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Adjusted for better spacing */
+    flex-wrap: wrap; /* Make it responsive */
+    justify-content: space-between; /* Ensure content doesn't overlap */
+  }
+
+  .leftItem {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 2;
+
+    h1 {
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: gray;
+      font-size: 18px;
+      font-weight: 600;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    p {
+      color: #333;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 28px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .rightItem {
+    flex: 3;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+
+    video {
+      width: 720px;
+    }
+  }
+
+  // Media Query for Mobile (max-width: 768px)
+  @media (max-width: 768px) {
+    padding: 50px 20px; /* Adjust padding for mobile screens */
+
+    .container {
+      width: 100%; /* Take full width on smaller screens */
+      flex-direction: column; /* Stack the content vertically */
+      gap: 30px; /* Add some space between items */
+    }
+
+    .leftItem {
+      flex: 1; /* Allow left item to take full width on mobile */
+      text-align: center; /* Center the text on mobile */
+    }
+
+    .rightItem {
+      flex: 1; /* Allow right item to take full width on mobile */
+      width: 100%; /* Ensure the video container takes full width */
+      padding: 0; /* Remove extra padding */
+      background-color: transparent; /* Remove background color */
+      border-radius: 0; /* Remove border radius */
+      
+      video {
+        width: 100%; /* Make the video responsive to screen width */
+        height: auto; /* Maintain aspect ratio */
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+.gigs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    .container {
+      width: 1200px;
+      padding: 160px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  
+      .intro {
+        font-weight: 300;
+        font-size: 13px;
+        color: #555;
+      }
+  
+      p {
+        color: #999;
+        font-weight: 300;
+      }
+  
+      .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap; /* Allow wrapping for small screens */
+  
+        .leftMenu {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: #555;
+          font-weight: 300;
+          flex: 1;
+  
+          input {
+            padding: 5px;
+            border: 1px solid lightgray;
+            outline: none;
+            width: 120px; /* Limit input width */
+            &::placeholder {
+              color: gray;
+            }
+          }
+  
+          button {
+            background-color: #1dbf73;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 7px 10px;
+            border-radius: 5px;
+            border: none;
+            min-width: 120px;
+          }
+  
+          button:hover {
+            background-color: #09a75d;
+          }
+        }
+  
+        .rightMenu {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          position: relative;
+          flex: 1;
+          justify-content: flex-end;
+        }
+  
+        .sortBy {
+          color: #555;
+          font-weight: 300;
+        }
+  
+        .sortType {
+          font-weight: 500;
+          color: #0e0e0e;
+        }
+  
+        img {
+          font-size: 15px;
+          cursor: pointer;
+        }
+  
+        .dropDownMenu {
+          padding: 20px;
+          background-color: white;
+          border-radius: 5px;
+          border: 3px solid lightgreen;
+          position: absolute;
+          top: 30px;
+          flex-direction: column;
+          gap: 20px;
+          color: #313030;
+  
+          span {
+            cursor: pointer;
+          }
+        }
+      }
+  
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px; /* Add spacing between cards */
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .gigs{
+     
+      
+      .container {
+        width: 100%;
+        padding: 80px 50px; /* Reduce padding on small screens */
+      }
+  
+      .menu {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start; /* Align items to the start */
+      }
+  
+      .leftMenu {
+        width: 100%;
+        justify-content: space-between; /* Space out the inputs */
+      }
+  
+      .rightMenu {
+        width: 100%;
+        justify-content: space-between;
+      }
+  
+      .cards {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 15px; /* Reduce gap between cards */
+      }
+  
+      .dropDownMenu {
+        width: 100%; /* Ensure dropdown takes full width on mobile */
+        left: 0; /* Position dropdown under the button */
+        top: 40px;
+        padding: 10px;
+      }
+  
+      input,
+      button {
+        font-size: 14px;
+        padding: 10px;
+        width: 100%; /* Ensure inputs and button take full width */
+      }
+  
+      button {
+        margin-top: 10px; /* Add spacing between input and button */
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .intro {
+        font-size: 12px; /* Adjust intro text size */
+        padding: 30px;
+      }
+  
+      .sortType {
+        font-size: 14px;
+         
+      }
+  
+      .menu {
+        flex-direction: column;
+        gap: 20px;
+      }
+  
+      .leftMenu {
+        gap: 8px; /* Adjust gap between input fields on small screens */
+      }
+  
+      .rightMenu {
+        gap: 8px;
+      }
+  
+      .cards {
+        gap: 10px; /* Smaller gap between cards on very small screens */
+      }
+    }
+  }
+}
